@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1> Kre38 Lab Pvt Ltd</h1>
+  <h3> Charts assignment</h3><br>
+<div>
+    <div style="display: flex;">
+        <div style="width: 600px;">
+            <h2>Polar Area Chart</h2>
+            <canvas style="width: 100px; height: 40px" id="plarChart"></canvas>
+        </div>
+        <div style="width: 600px;">
+            <h2>Radar Chart</h2>
+            <canvas style="width: 100px; height: 40px" id="radarChart"></canvas>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div style="width: 600px;">
+            <h2>Bar Chart</h2>
+            <canvas style="width: 100px; height: 40px" id="barChart"></canvas>
+        </div>
+        <div style="width: 600px;">
+            <h2>Line Chart</h2>
+            <canvas style="width: 100px; height: 40px" id="lineChart"></canvas>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div style="width: 600px;">
+            <h2>Doughnut Chart</h2>
+            <canvas style="width: 100px; height: 40px" id="doughnutChart"></canvas>
+        </div>
+        <div style="width: 600px;">
+            <h2>Pie Chart</h2>
+            <canvas style="width: 100px; height: 40px" id="pieChart"></canvas>
+        </div>
+    </div>
+</div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('plarChart');
+        const ctx2 = document.getElementById('radarChart');
+        const ctx3 = document.getElementById('barChart');
+        const ctx4 = document.getElementById('lineChart');
+        const ctx5 = document.getElementById('doughnutChart');
+        const ctx6 = document.getElementById('pieChart');
+      
+        new Chart(ctx, {
+          type: 'polarArea',
+          data: {
+            labels: ['x', 'y', 'z'],
+            datasets: [{
+              barPercentage: 0.5,
+              barThickness: 90,
+              maxBarThickness: 100,
+              label: '# of values',
+              data: [100 , 120 , 50],
+              borderWidth: 2,
+              backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(255, 205, 86)',
+              'rgb(54, 162, 235)'
+            ],
+            borderColor: [
+            'rgb(255, 99, 132)',
+              'rgb(255, 205, 86)',
+              'rgb(54, 162, 235)'
+            ],
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        new Chart(ctx2, {
+          type: 'radar',
+          data: {
+            labels: ['x', 'y', 'z'],
+            datasets: [{
+              barPercentage: 0.5,
+              barThickness: 90,
+              maxBarThickness: 100,
+              label: '# of values',
+              data: [100 , 120 , 50],
+              borderWidth: 2,
+              backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(255, 205, 86)',
+              'rgb(54, 162, 235)'
+            ],
+            borderColor: [
+            'rgb(255, 99, 132)',
+              'rgb(255, 205, 86)',
+              'rgb(54, 162, 235)'
+            ],
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        new Chart(ctx3, {
+          type: 'bar',
+          data: {
+            labels: ['x', 'y', 'z'],
+            datasets: [{
+              barPercentage: 0.5,
+              barThickness: 90,
+              maxBarThickness: 100,
+              label: '# of values',
+              data: [100 , 120 , 50],
+              borderWidth: 2,
+              backgroundColor: [
+              'rgba(54, 162, 235, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgb(255, 205, 86)',
+            ],
+            borderColor: [
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgb(255, 205, 86)',
+            ],
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        new Chart(ctx4, {
+          type: 'line',
+          data: {
+            labels: ['x', 'y', 'z'],
+            datasets: [{
+              barPercentage: 0.5,
+              barThickness: 90,
+              maxBarThickness: 100,
+              label: '# of values',
+              data: [100 , 120 , 50],
+              borderWidth: 2,
+              backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(255, 205, 86)',
+              'rgb(54, 162, 235)'
+            ],
+            borderColor: [
+            'rgb(255, 99, 132)',
+              'rgb(255, 205, 86)',
+              'rgb(54, 162, 235)'
+            ],
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        new Chart(ctx5, {
+          type: 'doughnut',
+          data: {
+            labels: ['x', 'y', 'z'],
+            datasets: [{
+              barPercentage: 0.5,
+              barThickness: 90,
+              maxBarThickness: 100,
+              label: '# of values',
+              data: [100 , 120 , 50],
+              borderWidth: 2,
+              backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(255, 205, 86)',
+              'rgb(54, 162, 235)'
+            ],
+            borderColor: [
+            'rgb(255, 99, 132)',
+              'rgb(255, 205, 86)',
+              'rgb(54, 162, 235)'
+            ],
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        new Chart(ctx6, {
+          type: 'pie',
+          data: {
+            labels: ['x', 'y', 'z'],
+            datasets: [{
+              barPercentage: 0.5,
+              barThickness: 90,
+              maxBarThickness: 100,
+              label: '# of values',
+              data: [100 , 120 , 50],
+              borderWidth: 2,
+              backgroundColor: [
+              'rgb(75, 192, 192)',
+              'rgb(54, 162, 235)',
+              'rgb(153, 102, 255)',
+            ],
+            borderColor: [
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            ],
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+    
+</body>
+</html>
